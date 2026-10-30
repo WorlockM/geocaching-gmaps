@@ -1,11 +1,14 @@
 // ==UserScript==
 // @name         Geocaching → Google Maps
-// @namespace    https://github.com/geocaching-gmaps
-// @version      1.0.0
+// @namespace    https://github.com/WorlockM/geocaching-gmaps
+// @version      1.0.1
 // @description  Voegt een klikbaar icoontje toe naast GPS-coördinaten op geocaching.com dat de locatie in Google Maps opent.
 // @match        https://www.geocaching.com/geocache/*
 // @match        https://www.geocaching.com/seek/cache_details.aspx*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=maps.google.com
+// @homepageURL  https://github.com/WorlockM/geocaching-gmaps
+// @updateURL    https://raw.githubusercontent.com/WorlockM/geocaching-gmaps/main/geocaching-gmaps.user.js
+// @downloadURL  https://raw.githubusercontent.com/WorlockM/geocaching-gmaps/main/geocaching-gmaps.user.js
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==

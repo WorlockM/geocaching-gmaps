@@ -13,7 +13,7 @@ Coördinaten in het Geocaching-formaat (`N 52° 22.123 E 004° 53.456`) worden o
 ## Installatie
 
 1. Installeer de Tampermonkey-extensie in je browser.
-2. Open `geocaching-gmaps.user.js` (lokaal, of via de "Raw"-knop op GitHub). Tampermonkey biedt dan aan het script te installeren.
+2. Klik op [deze installatielink](https://raw.githubusercontent.com/WorlockM/geocaching-gmaps/main/geocaching-gmaps.user.js). Tampermonkey biedt dan aan het script te installeren.
 3. Open een cachepagina op geocaching.com.
 
-Tip: zet na het publiceren op GitHub `@updateURL` en `@downloadURL` in de header, met de raw-URL van het script, zodat Tampermonkey updates automatisch oppikt.
+Tampermonkey haalt nieuwe versies automatisch op via de `@updateURL` in het script.
