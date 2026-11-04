@@ -16,4 +16,8 @@ Coordinates in the Geocaching format (`N 52° 22.123 E 004° 53.456`) are conver
 2. Click [this install link](https://raw.githubusercontent.com/WorlockM/geocaching-gmaps/main/geocaching-gmaps.user.js). Tampermonkey will offer to install the script.
 3. Open a cache page on geocaching.com.
 
-Tampermonkey fetches new versions automatically through the `@updateURL` in the script.
+Your userscript manager checks the source you installed from, so new versions arrive automatically.
+
+## License
+
+[MIT](LICENSE) © WorlockM
