@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Geocaching → Google Maps
 // @namespace    https://github.com/WorlockM/geocaching-gmaps
-// @version      1.0.1
-// @description  Voegt een klikbaar icoontje toe naast GPS-coördinaten op geocaching.com dat de locatie in Google Maps opent.
+// @version      1.0.2
+// @description  Adds a clickable icon next to GPS coordinates on geocaching.com that opens the location in Google Maps.
 // @match        https://www.geocaching.com/geocache/*
 // @match        https://www.geocaching.com/seek/cache_details.aspx*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=maps.google.com
@@ -16,12 +16,12 @@
 (function () {
   'use strict';
 
-  // Herkent het Geocaching-formaat "N 52° 22.123 E 004° 53.456" (graden + decimale minuten).
+  // Recognises the Geocaching format "N 52° 22.123 E 004° 53.456" (degrees + decimal minutes).
   const COORD_SOURCE =
     "([NS])\\s*(\\d{1,2})\\s*°\\s*(\\d{1,2}(?:[.,]\\d+)?)\\s*['′]?\\s*,?\\s*" +
     "([EWO])\\s*(\\d{1,3})\\s*°\\s*(\\d{1,2}(?:[.,]\\d+)?)\\s*['′]?";
 
-  // Delen van de pagina waar naast de hoofdcoördinaten ook coördinaten kunnen staan.
+  // Parts of the page that can contain coordinates in addition to the main coordinates.
   const EXTRA_ROOTS = [
     '#ctl00_ContentBody_Waypoints',
     '#ctl00_ContentBody_ShortDescription',
@@ -49,10 +49,10 @@
     link.className = 'gcgm-link';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.title = 'Openen in Google Maps';
+    link.title = 'Open in Google Maps';
     link.innerHTML = PIN_SVG;
     if (url) link.href = url;
-    // Voorkomt dat de klik ook de coördinaten-popup van Geocaching opent.
+    // Prevents the click from also opening Geocaching's coordinates popup.
     link.addEventListener('click', (e) => e.stopPropagation());
     return link;
   }
@@ -67,8 +67,8 @@
     document.head.appendChild(style);
   }
 
-  // Hoofdcoördinaten: het icoontje komt naast #uxLatLon en volgt aangepaste
-  // (gecorrigeerde) coördinaten zodra de gebruiker die invult.
+  // Main coordinates: the icon goes next to #uxLatLon and follows modified
+  // (corrected) coordinates as soon as the user enters them.
   function handleMainCoords() {
     const el = document.getElementById('uxLatLon');
     if (!el) return;

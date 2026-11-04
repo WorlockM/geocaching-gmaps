@@ -1,19 +1,19 @@
 # Geocaching → Google Maps
 
-Een userscript voor [Tampermonkey](https://www.tampermonkey.net/) dat op cachepagina's van geocaching.com een klein Google Maps-icoontje naast de GPS-coördinaten zet. Eén klik en de locatie opent in Google Maps in een nieuw tabblad.
+A userscript for [Tampermonkey](https://www.tampermonkey.net/) that puts a small Google Maps icon next to the GPS coordinates on geocaching.com cache pages. One click opens the location in Google Maps in a new tab.
 
-## Wat het doet
+## What it does
 
-- Zet een icoontje naast de hoofdcoördinaten van de cache.
-- Werkt ook met gecorrigeerde coördinaten: past je ze aan via Geocaching, dan wijst het icoontje direct naar de nieuwe locatie.
-- Herkent coördinaten in de tabel met extra waypoints en in de cachebeschrijving.
+- Puts an icon next to the cache's main coordinates.
+- Also works with corrected coordinates: if you change them through Geocaching, the icon immediately points to the new location.
+- Recognises coordinates in the additional waypoints table and in the cache description.
 
-Coördinaten in het Geocaching-formaat (`N 52° 22.123 E 004° 53.456`) worden omgerekend naar decimale graden en geopend via `https://www.google.com/maps/search/?api=1&query=lat,lon`.
+Coordinates in the Geocaching format (`N 52° 22.123 E 004° 53.456`) are converted to decimal degrees and opened via `https://www.google.com/maps/search/?api=1&query=lat,lon`.
 
-## Installatie
+## Installation
 
-1. Installeer de Tampermonkey-extensie in je browser.
-2. Klik op [deze installatielink](https://raw.githubusercontent.com/WorlockM/geocaching-gmaps/main/geocaching-gmaps.user.js). Tampermonkey biedt dan aan het script te installeren.
-3. Open een cachepagina op geocaching.com.
+1. Install the Tampermonkey extension in your browser.
+2. Click [this install link](https://raw.githubusercontent.com/WorlockM/geocaching-gmaps/main/geocaching-gmaps.user.js). Tampermonkey will offer to install the script.
+3. Open a cache page on geocaching.com.
 
-Tampermonkey haalt nieuwe versies automatisch op via de `@updateURL` in het script.
+Tampermonkey fetches new versions automatically through the `@updateURL` in the script.
